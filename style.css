@@ -26,8 +26,7 @@ nav a:hover { color:#ccc; }
 
 /* BANNER */
 .banner { 
-  height:80vh; background: rgba(255,255,255,0.05); display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; 
-  transition: 0.5s; backdrop-filter: blur(5px);
+  height:80vh; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center;
 }
 .banner:hover { filter: brightness(1.1); }
 .banner h1 { font-size:3rem; color:#fff; margin-bottom:10px; }
