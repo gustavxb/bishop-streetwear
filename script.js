@@ -73,3 +73,33 @@ document.getElementById("form-login").onsubmit = e=>{
   alert("Login realizado com sucesso!");
   document.getElementById("modal-login").style.display="none";
 }
+// --- CÓDIGO PARA O MENU HAMBÚRGUER ---
+document.addEventListener('DOMContentLoaded', () => {
+    const menuToggle = document.getElementById('menu-toggle');
+    const mainNav = document.querySelector('.main-nav');
+
+    // Verifica se os elementos existem antes de adicionar o listener
+    if (menuToggle && mainNav) {
+        menuToggle.addEventListener('click', () => {
+            // Adiciona ou remove a classe 'active' no menu de navegação
+            mainNav.classList.toggle('active');
+        });
+    }
+
+    // Opcional: Fechar o menu ao clicar em um link
+    const navLinks = document.querySelectorAll('.main-nav a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (mainNav.classList.contains('active')) {
+                mainNav.classList.remove('active');
+            }
+        });
+    });
+});
+
+
+// --- SEU CÓDIGO EXISTENTE DO CARRINHO, MODAIS, ETC, DEVE FICAR AQUI EMBAIXO ---
+
+// Exemplo:
+// const addCartButtons = document.querySelectorAll('.add-cart');
+// ... resto do seu código ...
